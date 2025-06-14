@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="88e03b70-0dc9-46ba-b252-9f2cd1697f11">
+  <name>ConReg</name>
+  <synonym>
+    <key>ru</key>
+    <value>Con reg</value>
+  </synonym>
+  <server>true</server>
+</mdclass:CommonModule>
