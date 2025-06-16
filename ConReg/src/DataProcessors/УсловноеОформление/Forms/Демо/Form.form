@@ -154,7 +154,7 @@
       </items>
       <items xsi:type="form:Table">
         <name>Состав</name>
-        <id>70</id>
+        <id>106</id>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
@@ -166,7 +166,7 @@
         <titleLocation>None</titleLocation>
         <items xsi:type="form:FormField">
           <name>СоставРеквизит1</name>
-          <id>83</id>
+          <id>119</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -177,7 +177,7 @@
           </dataPath>
           <extendedTooltip>
             <name>СоставРеквизит1РасширеннаяПодсказка</name>
-            <id>85</id>
+            <id>121</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -187,7 +187,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>СоставРеквизит1КонтекстноеМеню</name>
-            <id>84</id>
+            <id>120</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -206,7 +206,7 @@
         </items>
         <items xsi:type="form:FormField">
           <name>СоставРеквизит2</name>
-          <id>86</id>
+          <id>122</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -217,7 +217,7 @@
           </dataPath>
           <extendedTooltip>
             <name>СоставРеквизит2РасширеннаяПодсказка</name>
-            <id>88</id>
+            <id>124</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -227,7 +227,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>СоставРеквизит2КонтекстноеМеню</name>
-            <id>87</id>
+            <id>123</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>InputField</type>
@@ -246,7 +246,7 @@
         </items>
         <items xsi:type="form:FormField">
           <name>СоставРеквизит3</name>
-          <id>89</id>
+          <id>125</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -257,7 +257,7 @@
           </dataPath>
           <extendedTooltip>
             <name>СоставРеквизит3РасширеннаяПодсказка</name>
-            <id>91</id>
+            <id>127</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -267,7 +267,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>СоставРеквизит3КонтекстноеМеню</name>
-            <id>90</id>
+            <id>126</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>CheckBoxField</type>
@@ -279,7 +279,7 @@
         </items>
         <items xsi:type="form:FormField">
           <name>СоставРеквизит4</name>
-          <id>92</id>
+          <id>128</id>
           <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
@@ -290,7 +290,7 @@
           </dataPath>
           <extendedTooltip>
             <name>СоставРеквизит4РасширеннаяПодсказка</name>
-            <id>94</id>
+            <id>130</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -300,7 +300,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>СоставРеквизит4КонтекстноеМеню</name>
-            <id>93</id>
+            <id>129</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>CheckBoxField</type>
@@ -312,16 +312,16 @@
         </items>
         <autoCommandBar>
           <name>СоставКоманднаяПанель</name>
-          <id>71</id>
+          <id>107</id>
           <horizontalAlign>Left</horizontalAlign>
           <autoFill>true</autoFill>
         </autoCommandBar>
         <searchStringAddition>
           <name>СоставСтрокаПоиска</name>
-          <id>74</id>
+          <id>110</id>
           <extendedTooltip>
             <name>СоставСтрокаПоискаРасширеннаяПодсказка</name>
-            <id>76</id>
+            <id>112</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -331,7 +331,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>СоставСтрокаПоискаКонтекстноеМеню</name>
-            <id>75</id>
+            <id>111</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <source>Состав</source>
@@ -341,10 +341,10 @@
         </searchStringAddition>
         <viewStatusAddition>
           <name>СоставСостояниеПросмотра</name>
-          <id>80</id>
+          <id>116</id>
           <extendedTooltip>
             <name>СоставСостояниеПросмотраРасширеннаяПодсказка</name>
-            <id>82</id>
+            <id>118</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -354,7 +354,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>СоставСостояниеПросмотраКонтекстноеМеню</name>
-            <id>81</id>
+            <id>117</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>ViewStatusAddition</type>
@@ -365,10 +365,10 @@
         </viewStatusAddition>
         <searchControlAddition>
           <name>СоставУправлениеПоиском</name>
-          <id>77</id>
+          <id>113</id>
           <extendedTooltip>
             <name>СоставУправлениеПоискомРасширеннаяПодсказка</name>
-            <id>79</id>
+            <id>115</id>
             <type>Label</type>
             <autoMaxWidth>true</autoMaxWidth>
             <autoMaxHeight>true</autoMaxHeight>
@@ -378,7 +378,7 @@
           </extendedTooltip>
           <contextMenu>
             <name>СоставУправлениеПоискомКонтекстноеМеню</name>
-            <id>78</id>
+            <id>114</id>
             <autoFill>true</autoFill>
           </contextMenu>
           <type>SearchControlAddition</type>
@@ -389,7 +389,7 @@
         </searchControlAddition>
         <extendedTooltip>
           <name>СоставРасширеннаяПодсказка</name>
-          <id>73</id>
+          <id>109</id>
           <type>Label</type>
           <autoMaxWidth>true</autoMaxWidth>
           <autoMaxHeight>true</autoMaxHeight>
@@ -399,7 +399,7 @@
         </extendedTooltip>
         <contextMenu>
           <name>СоставКонтекстноеМеню</name>
-          <id>72</id>
+          <id>108</id>
           <autoFill>true</autoFill>
         </contextMenu>
         <changeRowSet>true</changeRowSet>
@@ -433,6 +433,7 @@
         <key>ru</key>
         <value>Группа лево</value>
       </title>
+      <horizontalStretch>false</horizontalStretch>
       <extendedTooltip>
         <name>ГруппаЛевоРасширеннаяПодсказка</name>
         <id>16</id>
@@ -489,8 +490,6 @@
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
           <horizontalStretch>true</horizontalStretch>
           <verticalStretch>true</verticalStretch>
           <wrap>true</wrap>
@@ -509,6 +508,8 @@
         <key>ru</key>
         <value>Группа право</value>
       </title>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>true</verticalStretch>
       <extendedTooltip>
         <name>ГруппаПравоРасширеннаяПодсказка</name>
         <id>64</id>
@@ -725,7 +726,9 @@
       <id>8</id>
       <valueType>
         <types>String</types>
-        <stringQualifiers/>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
       </valueType>
       <view>
         <common>true</common>
@@ -740,7 +743,7 @@
       <valueType>
         <types>Number</types>
         <numberQualifiers>
-          <precision>10</precision>
+          <precision>5</precision>
         </numberQualifiers>
       </valueType>
       <view>
