@@ -38,7 +38,6 @@
     </synonym>
     <languageCode>ru</languageCode>
   </languages>
-  <commonModules>CommonModule.ConReg</commonModules>
   <catalogs>Catalog.Справочник</catalogs>
   <dataProcessors>DataProcessor.УсловноеОформление</dataProcessors>
 </mdclass:Configuration>
