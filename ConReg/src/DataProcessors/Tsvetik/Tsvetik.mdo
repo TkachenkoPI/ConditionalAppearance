@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2004ec6f-8d25-422c-8037-b24e67ef1505">
+  <producedTypes>
+    <objectType typeId="b01b07bc-9df8-49d9-896c-1459a8497704" valueTypeId="4a7ff3f4-1461-4af8-94b2-8c7df2891c2a"/>
+    <managerType typeId="32fd0787-ca5e-4e4b-a520-d7892f3869b9" valueTypeId="a1033a26-0e92-4dbd-870d-76f2aed22a56"/>
+  </producedTypes>
+  <name>Tsvetik</name>
+  <synonym>
+    <key>ru</key>
+    <value>Tsvetik</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+</mdclass:DataProcessor>

@@ -39,5 +39,6 @@
     <languageCode>ru</languageCode>
   </languages>
   <catalogs>Catalog.Справочник</catalogs>
-  <dataProcessors>DataProcessor.УсловноеОформление</dataProcessors>
+  <dataProcessors>DataProcessor.Tsvetik</dataProcessors>
+  <dataProcessors>DataProcessor.Цветик</dataProcessors>
 </mdclass:Configuration>
