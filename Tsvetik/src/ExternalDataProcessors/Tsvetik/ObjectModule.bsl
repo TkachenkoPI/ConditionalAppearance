@@ -9,6 +9,39 @@ Var WebColorsCache;
 
 #Region Public
 
+#Region Overridable
+
+// Lets you set the language code Tsvetik shows its error messages in.
+// Ru: Позволяет задать код языка, на котором Tsvetik выдает сообщения об ошибках.
+//
+// Message texts are stored in both English and Russian, this method picks which one to show.
+// Ru: Тексты сообщений хранятся сразу на английском и русском, метод выбирает, какой показать.
+//
+// This is the place to adjust when embedding the data processor into your own configuration:
+// almost every database already has its own source of the language code. Set it here once.
+// Ru: Место для доработки при встраивании обработки в свою конфигурацию: почти в каждой базе
+// Ru: уже есть свой источник кода языка. Пропишите его здесь один раз.
+//
+// Does not affect code generation: GenerateCode always produces English code.
+// Russian code is produced by the Russian version of the data processor - Цветик.
+// Ru: На генерацию кода не влияет: GenerateCode всегда выдает английский код.
+// Ru: Русский код генерирует русская версия обработки - Цветик.
+//
+// Parameters:
+//  LanguageCode - String - message language code. On input it is the data processor language, "en".
+//                          If left empty, the data processor language is used.
+Procedure LanguageCodeOverridable(LanguageCode)
+
+	// Examples for typical configurations:
+	//
+	// LanguageCode = Common.DefaultLanguageCode();
+	// LanguageCode = SessionParameters.LanguageCode;
+	// LanguageCode = CurrentLanguage().LanguageCode;
+
+EndProcedure
+
+#EndRegion
+
 // Sets the conditional appearance the object works with. Must be called first.
 // Ru: Устанавливает условное оформление, с которым работает объект. Вызывается первым.
 //
@@ -207,7 +240,8 @@ Function EndGroup() Export
 	CheckItem();
 
 	If TypeOf(CurrentItem) <> Type("DataCompositionFilterItemGroup") Then
-		Raise NStr("en = 'EndGroup is called without an open filter group'", "en");
+		Raise NStr("en = '""EndGroup"" is called without an open filter group';
+			|ru = 'Вызов метода ""EndGroup"" без открытой группы отбора'", LanguageCode());
 	EndIf;
 
 	Parent = CurrentItem.Parent;
@@ -704,6 +738,36 @@ EndFunction
 
 #Region Private
 
+// Language code of the error messages.
+// Takes the data processor language and lets "LanguageCodeOverridable" replace it.
+// Ru: Код языка сообщений. Берет язык обработки и дает переопределить его в "LanguageCodeOverridable".
+//
+// Returns:
+//  String - "en", "ru"
+Function LanguageCode()
+
+	Code = DefaultLanguageCode();
+
+	LanguageCodeOverridable(Code);
+
+	Return ?(ValueIsFilled(Code), Code, DefaultLanguageCode());
+
+EndFunction
+
+// Language of the data processor itself. The only place it is defined.
+// Ru: Язык самой обработки. Единственное место, где он задан.
+//
+// The Russian twin - Цветик - returns "ru" here.
+// Ru: Русский аналог обработки - Цветик - возвращает здесь "ru".
+//
+// Returns:
+//  String
+Function DefaultLanguageCode()
+
+	Return "en";
+
+EndFunction
+
 #Region Building
 
 Function AddFilter(Field, ComparisonType, Value)
@@ -779,8 +843,9 @@ Function FormItemName(Source)
 
 	If Not ValueIsFilled(CheckStructure.Name) Then
 		Raise StrTemplate(NStr(
-			"en = 'Cannot determine the appearance item. A string or a form item with the ""Name"" property was expected, got: %1'",
-			"en"), String(TypeOf(Source)));
+			"en = 'Cannot determine the appearance item. A string or a form item with the ""Name"" property was expected, got: %1';
+			|ru = 'Не удалось определить оформляемый элемент. Ожидалась строка или элемент формы со свойством ""Name"", получено: %1'",
+			LanguageCode()), String(TypeOf(Source)));
 	EndIf;
 
 	Return CheckStructure.Name;
@@ -798,8 +863,9 @@ Function FieldAdapter(Field)
 
 	If Not ValueIsFilled(CheckStructure.DataPath) Then
 		Raise StrTemplate(NStr(
-			"en = 'Cannot determine the filter field. A string or a form item with the ""DataPath"" property was expected, got: %1'",
-			"en"), String(TypeOf(Field)));
+			"en = 'Cannot determine the filter field. A string or a form item with the ""DataPath"" property was expected, got: %1';
+			|ru = 'Не удалось определить поле отбора. Ожидалась строка или элемент формы со свойством ""DataPath"", получено: %1'",
+			LanguageCode()), String(TypeOf(Field)));
 	EndIf;
 
 	Return CheckStructure.DataPath;
@@ -809,7 +875,8 @@ EndFunction
 Procedure CheckConditionalAppearance()
 
 	If ConditionalAppearance = Undefined Then
-		Raise NStr("en = 'Call the ""Set"" method first and pass the form conditional appearance'", "en");
+		Raise NStr("en = 'Call the ""Set"" method first and pass the form conditional appearance';
+			|ru = 'Сначала вызовите метод ""Set"" и передайте условное оформление формы'", LanguageCode());
 	EndIf;
 
 EndProcedure
@@ -819,7 +886,8 @@ Procedure CheckItem()
 	CheckConditionalAppearance();
 
 	If AppearanceItem = Undefined Then
-		Raise NStr("en = 'Call the ""Item"" method first'", "en");
+		Raise NStr("en = 'Call the ""Item"" method first';
+			|ru = 'Сначала вызовите метод ""Item""'", LanguageCode());
 	EndIf;
 
 EndProcedure
