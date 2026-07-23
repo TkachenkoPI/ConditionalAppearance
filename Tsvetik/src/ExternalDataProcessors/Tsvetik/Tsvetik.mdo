@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="42c0a9fe-d581-454f-91ea-4fa1fbef24c2">
+  <producedTypes>
+    <objectType typeId="d123c6db-1e5a-4617-8afa-32049d1e4224" valueTypeId="10f087a8-82cf-464a-b651-315a598e60e2"/>
+  </producedTypes>
+  <name>Tsvetik</name>
+  <synonym>
+    <key>ru</key>
+    <value>Tsvetik</value>
+  </synonym>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="d120f23e-ebc9-4324-8a2f-7f09ff319f11"/>
+</mdclass:ExternalDataProcessor>

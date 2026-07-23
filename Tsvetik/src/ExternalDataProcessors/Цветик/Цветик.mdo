@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0d68686a-3b6c-44df-a741-9ff07c91f2df">
+  <producedTypes>
+    <objectType typeId="d8d45581-017d-4159-9a3a-d15ef3bca9c5" valueTypeId="a0b55947-0b9d-4c4f-b1c3-5d478e52629b"/>
+  </producedTypes>
+  <name>Цветик</name>
+  <synonym>
+    <key>ru</key>
+    <value>Цветик</value>
+  </synonym>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="5f4261f6-8de0-4c0f-b39b-90fe6494ef8c"/>
+  <defaultForm>ExternalDataProcessor.Цветик.Form.Демо</defaultForm>
+  <forms uuid="45ed3334-cc2d-44a4-a806-8b82ccc5fd58">
+    <name>Демо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Демо работы условного оформления</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ExternalDataProcessor>
