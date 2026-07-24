@@ -5,8 +5,18 @@
   </producedTypes>
   <name>Tsvetik</name>
   <synonym>
-    <key>ru</key>
+    <key>en</key>
     <value>Tsvetik</value>
   </synonym>
   <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="d120f23e-ebc9-4324-8a2f-7f09ff319f11"/>
+  <defaultForm>ExternalDataProcessor.Tsvetik.Form.Demo</defaultForm>
+  <forms uuid="b4f7f3cd-2b5c-4545-b010-71195c96d83f">
+    <name>Demo</name>
+    <synonym>
+      <key>en</key>
+      <value>Conditional appearance demo</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
 </mdclass:ExternalDataProcessor>
