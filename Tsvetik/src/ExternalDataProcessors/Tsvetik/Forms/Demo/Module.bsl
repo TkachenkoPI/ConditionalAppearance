@@ -630,43 +630,68 @@ Procedure VisibilityTestAtServer()
 
 	PrepareVisibilityTestData();
 
-	// THIS BLOCK DOES NOTHING AND IS KEPT AS A DEMONSTRATION OF THE LIMITATION.
+	// ==============================================================================
+	// THIS BLOCK DOES NOT WORK. It is kept on purpose, as a demonstration.
+	// Ru: ЭТОТ БЛОК НЕ РАБОТАЕТ. Он оставлен намеренно, как демонстрация.
+	//
 	// Attribute1 is a plain form field, not a table item. Conditional appearance applies
-	// Visible and Show only to table columns and to the table itself, so the filter works
-	// but the field stays visible. No exception is raised.
-	// A plain field can only be hidden by code: Items.Attribute1.Visible = Not Attribute3;
-	// Ru: Блок ничего не делает: Visible и Show не работают на обычном поле формы.
+	// Visible and Show only to form table items - a column or the table itself.
+	// So the filter is evaluated, the appearance is not applied, and no exception is raised.
+	// Ru: Видимость и Отображать применяются только к элементам таблицы формы.
+	//
+	// A plain form field can only be hidden by code:
+	//     Items.Attribute1.Visible = Not Attribute3;
+	// ==============================================================================
 	NewTsvetik()
 		.Clear()
 		.Item(Items.Attribute1)
 			.Equal(Items.Attribute3, True)
 			.Visible(False)
 			.Show(False);
+	// ============================ end of the non-working block ====================
 
+	// Works: CompositionAttribute2 is a table column.
+	// Ru: Работает: CompositionAttribute2 - колонка таблицы.
 	NewTsvetik()
 		.Item(Items.CompositionAttribute2)
 			.Equal(Items.Attribute3, True)
 			.Visible(False)
 			.Show(False);
 
+	// Works: text replacement in the cells of a table column.
+	// Ru: Работает: подмена текста в ячейках колонки таблицы.
 	NewTsvetik()
 		.Item(Items.CompositionAttribute1)
 			.Equal(Items.CompositionAttribute3, True)
 			.Text("***");
 
-	Result = "Tsvetik.Set(ConditionalAppearance)
+	Result = "// ==============================================================================
+	|// THIS BLOCK DOES NOT WORK. It is kept on purpose, as a demonstration.
+	|//
+	|// Attribute1 is a plain form field, not a table item. Conditional appearance
+	|// applies Visible and Show only to form table items - a column or the table
+	|// itself. So the filter is evaluated, the appearance is not applied,
+	|// and no exception is raised: the field just stays visible.
+	|//
+	|// A plain form field can only be hidden by code:
+	|//     Items.Attribute1.Visible = Not Attribute3;
+	|// ==============================================================================
+	|Tsvetik.Set(ConditionalAppearance)
 	|	.Clear()
 	|	.Item(Items.Attribute1)
 	|		.Equal(Items.Attribute3, True)
 	|		.Visible(False)
 	|		.Show(False);
+	|// ========================= end of the non-working block =======================
 	|
+	|// Works: CompositionAttribute2 is a table column.
 	|Tsvetik.Set(ConditionalAppearance)
 	|	.Item(Items.CompositionAttribute2)
 	|		.Equal(Items.Attribute3, True)
 	|		.Visible(False)
 	|		.Show(False);
 	|
+	|// Works: text replacement in the cells of a table column.
 	|Tsvetik.Set(ConditionalAppearance)
 	|	.Item(Items.CompositionAttribute1)
 	|		.Equal(Items.CompositionAttribute3, True)
